@@ -76,7 +76,11 @@ WSGI_APPLICATION = 'refugio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'refugio',
+        'USER': 'root',
+         'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 3306, 
     }
 }
 
@@ -103,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
