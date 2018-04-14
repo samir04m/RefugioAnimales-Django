@@ -12,4 +12,6 @@ class Persona(models.Model):
 
 
 	def __str__(self):
-		return '{} {}'.format(self.nombre, self.nombre)
+		return '{} {}'.format(self.nombre, self.apellidos)
+
+		
