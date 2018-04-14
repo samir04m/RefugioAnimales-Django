@@ -1,0 +1,75 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Crear una Solicitud {% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<!-- <div class="col hide-on-small-only offset-l2"></div> -->
+			<div class="col m12">
+				<div class="card-panel grey lighten-4 hoverable z-depth-4">
+					<form method="post">
+						{% csrf_token %}
+						<div class="row">
+							<div class="col s12 l6">
+								<div class="center">Datos de la Persona</div>
+								<div class="row">
+									<div class="input-field col s12 m6">
+										{{ form2.nombre }}
+										<label for="{{ form2.nombre.label }}">{{ form2.nombre.label }}</label>
+									</div>
+									<div class="input-field col s12 m6">
+										{{ form2.apellidos }}
+										<label for="{{ form2.apellidos.label }}">{{ form2.apellidos.label }}</label>
+									</div>
+									<div class="input-field col s12 m6">
+										{{ form2.edad }}
+										<label for="{{ form2.edad.label }}">{{ form2.edad.label }}</label>
+									</div>
+									<div class="input-field col s12 m6">
+										{{ form2.telefono }}
+										<label for="{{ form2.telefono.label }}">{{ form2.telefono.label }}</label>
+									</div>
+									<div class="input-field col s12">
+										{{ form2.email }}
+										<label for="{{ form2.email.label }}">{{ form2.email.label }}</label>
+									</div>
+									<div class="input-field col s12">
+										{{ form2.domicilio }}
+										<label for="{{ form2.domicilio.label }}">{{ form2.domicilio.label }}</label>
+									</div>
+								</div>
+							</div>
+							<div class="col hide-on-med-and-down l1"></div>
+							<div class="col s12 l5">
+								<div class="center">Datos de Adopción</div>
+								<div class="input-field">
+									{{ form.numero_mascota }}
+									<label for="{{ form.numero_mascota.label }}">{{ form.numero_mascota.label }}</label>
+								</div>
+								<div class="input-field">
+									{{ form.razones }}
+									<label for="{{ form.razones.label }}">{{ form.razones.label }}</label>
+								</div>
+							</div>
+						</div>
+						<center>
+							<button type="submit" class="btn waves-effect">Guardar</button>
+						</center>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block extrajs %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $('textarea').addClass('materialize-textarea');
+			$('#id_razones').trigger('autoresize');
+		});
+	</script>
+{% endblock %}
