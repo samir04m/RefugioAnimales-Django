@@ -3,9 +3,11 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %} Refugio {% endblock %}</title> 
 
 	<link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/myStyles.css' %}">
 
 	<script type="text/javascript" src="{% static 'js/fontawesome-all.js' %}"></script>
 
@@ -17,10 +19,11 @@
 		{% include 'base/header.html' %}
 	{% endblock %}
 
-	{% block content %}
-		<h4>Soy el content</h4>
-
-	{% endblock %}
+	<main>
+		{% block content %}
+			<h4>Soy el content</h4>
+		{% endblock %}
+	</main>
 
 	{% block footer %}
 		{% include 'base/footer.html' %}
