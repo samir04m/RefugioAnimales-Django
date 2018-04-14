@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %} Refugio {% endblock %}</title> 
+
+	{% block extrahead %}
+	{% endblock %}
+</head>
+<body>
+	{% block header %}
+		{% include 'base/header.html' %}
+	{% endblock %}
+
+	{% block content %}
+		<h4>Soy el content</h4>
+
+	{% endblock %}
+
+	{% block footer %}
+		{% include 'base/footer.html' %}
+	{% endblock %}
+	
+	{% block extrajs %}
+	{% endblock %}
+</body>
+</html>
