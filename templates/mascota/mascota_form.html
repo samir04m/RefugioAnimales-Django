@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col hide-on-small-only offset-l2"></div>
+			<div class="col m12 l8">
+				<div class="card-panel grey lighten-4 hoverable z-depth-4">
+					<form method="post">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<button type="submit" class="btn waves-effect">Guardar</button>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

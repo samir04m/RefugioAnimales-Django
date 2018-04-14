@@ -17,6 +17,7 @@
 <body>
 	{% block header %}
 		{% include 'base/header.html' %}
+		<br>
 	{% endblock %}
 
 	<main>
@@ -24,8 +25,9 @@
 			<h4>Soy el content</h4>
 		{% endblock %}
 	</main>
-
+	
 	{% block footer %}
+		<br><br>
 		{% include 'base/footer.html' %}
 	{% endblock %}
 	
@@ -34,5 +36,11 @@
 
 	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		   	$('select').material_select();
+		});
+	</script>
 </body>
 </html>
