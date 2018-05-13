@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 
 from django.http import HttpResponse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse_lazy 
+from django.core.urlresolvers import reverse_lazy
 
 from apps.mascota.forms import MascotaForm
 from apps.mascota.models import Mascota
@@ -76,4 +76,3 @@ class MascotaDelete(DeleteView):
 	model = Mascota
 	template_name = 'mascota/mascota_delete.html'
 	success_url = reverse_lazy('mascota:mascota_listar')
-

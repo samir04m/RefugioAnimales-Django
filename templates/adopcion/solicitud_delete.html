@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Eliminar Solicitud {% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col hide-on-small-only offset-l2"></div>
+			<div class="col m12 l8">
+				<div class="card-panel grey lighten-4 hoverable z-depth-4">
+					<form method="post">
+						{% csrf_token %}
+						<center>
+							<big>¿Desea eliminar  el registro de {{ object.persona.nombre }}?</big>
+								<br><br>
+							<a href="{% url 'adopcion:solicitud_listar' %}" class="btn white black-text">Cancelar</a>
+							<button type="submit" class="btn waves-effect red">Eliminar</button>
+						</center>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
