@@ -7,3 +7,6 @@ body {
 main {
 	flex: 1 0 auto;
 }
+.titulo-tabla {
+	margin-top: 0 !important;
+}

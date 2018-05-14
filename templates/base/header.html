@@ -7,8 +7,11 @@
 	<nav class="teal darken-2">
 		<div class="container">
 			<div class="nav-wrapper">
-				<a href="{% if request.user.is_authenticated %}{% url 'mascota:mascota_listar' %}{% else %}{% url 'index' %}{% endif %}" class="brand-logo "><i class="fas fa-paw"></i> Refugio de Animales</a>
-
+				{% if request.user.is_authenticated %}
+					<a href="{% url 'mascota:mascota_listar' %}" class="brand-logo truncate hide-on-small-only"><i class="fas fa-paw"></i> Refugio de Animales</a>
+				{% else %}
+					<a href="{% url 'index' %}" class="brand-logo truncate hide-on-small-only"><i class="fas fa-paw"></i> Refugio de Animales</a>
+				{% endif %}
 				<a href="#" class="button-collapse" data-activates="slide-out">
 					<i class="fas fa-bars fa-lg"></i>
 				</a>
