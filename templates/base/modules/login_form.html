@@ -9,8 +9,12 @@
         {{ form.password }}
         <label for="{{ form.password.label }}">{{ form.password.label }}</label>
     </div>
+    <div class="m12">
+        {{ form.non_field_errors }}
+    </div>
+
     <div class="row center">
         <button type="submit" class="btn waves-effect waves-light">Ingresar</button>
     </div>
-    <div class="center"><a href="#">Olvidé mi contraseña</a></div>
+    <div class="center"><a href="{% url 'password_reset' %}">Olvidé mi contraseña</a></div>
 </form>

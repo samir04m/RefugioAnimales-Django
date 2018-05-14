@@ -132,3 +132,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 LOGIN_REDIRECT_URL = reverse_lazy('adopcion:solicitud_listar')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+# Configuracion para el envio de correos
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'restaurar.contrasena@gmail.com'
+EMAIL_HOST_PASSWORD = 'jmjkebkfbrfgczmy'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
