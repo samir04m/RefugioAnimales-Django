@@ -6,8 +6,12 @@
 				<ul class="right hide-on-med-and-down">
 					<li><a href="{% url 'mascota:mascota_listar' %}">Mascotas</a></li>
 					<li><a href="{% url 'adopcion:solicitud_listar' %}">Adopciones</a></li>
-					<li><a href="{% url 'usuario:registrar' %}">Registro</a></li>
-					<li><a href="#">Ingresar</a></li>
+					{% if request.user.is_authenticated %}
+						<li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+					{% else %}
+						<li><a href="{% url 'usuario:registrar' %}">Registro</a></li>
+						<li><a href="{% url 'login' %}">Ingresar</a></li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>
