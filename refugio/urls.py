@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^adopcion/', include('apps.adopcion.urls', namespace="adopcion")),
     url(r'^usuario/', include('apps.usuario.urls', namespace="usuario")),
 
-    url(r'^$', login, {'template_name' : 'index.html'}, name="login"),
+    url(r'^accounts/login/', login, {'template_name' : 'index.html'}, name="login"),
     url(r'^logout/$', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
 
     url(r'^reset/password_reset', password_reset, {'template_name':'usuario/password_reset/password_reset_form.html',
