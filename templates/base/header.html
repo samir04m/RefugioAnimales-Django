@@ -7,7 +7,7 @@
 	<nav class="teal darken-2">
 		<div class="container">
 			<div class="nav-wrapper">
-				<a href="#" class="brand-logo "><i class="fas fa-paw"></i> Refugio de Animales</a>
+				<a href="{% if request.user.is_authenticated %}{% url 'mascota:mascota_listar' %}{% else %}{% url 'index' %}{% endif %}" class="brand-logo "><i class="fas fa-paw"></i> Refugio de Animales</a>
 				<ul class="right hide-on-med-and-down">
 					{% if request.user.is_authenticated %}
 						<li><a href="{% url 'mascota:mascota_listar' %}">Mascotas</a></li>

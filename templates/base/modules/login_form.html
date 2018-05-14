@@ -9,12 +9,15 @@
         {{ form.password }}
         <label for="{{ form.password.label }}">{{ form.password.label }}</label>
     </div>
-    <div class="m12">
+    <div class="m12 red-text">
         {{ form.non_field_errors }}
     </div>
 
     <div class="row center">
-        <button type="submit" class="btn waves-effect waves-light">Ingresar</button>
+        <center>{% include 'base/modules/preloader.html' %}</center>
+        <button type="submit" class="btn waves-effect waves-light" id="btnLogin">
+            Ingresar
+        </button>
     </div>
     <div class="center"><a href="{% url 'password_reset' %}">Olvidé mi contraseña</a></div>
 </form>

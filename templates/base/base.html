@@ -34,17 +34,8 @@
 
 	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/myScript.js' %}"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-		   	$('select').material_select();
-
-			$('.dropdown-button').dropdown({
-				 belowOrigin: true,
-				 constrainWidth: false
-			});
-		});
-	</script>
 
 	{% block extrajs %}
 	{% endblock %}

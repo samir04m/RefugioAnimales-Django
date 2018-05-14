@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^adopcion/', include('apps.adopcion.urls', namespace="adopcion")),
     url(r'^usuario/', include('apps.usuario.urls', namespace="usuario")),
 
+    url(r'^$', login, {'template_name' : 'index.html'}, name="index"),
     url(r'^accounts/login/', login, {'template_name' : 'index.html'}, name="login"),
     url(r'^logout/$', logout_then_login, name='logout'),
 
