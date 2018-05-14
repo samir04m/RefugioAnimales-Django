@@ -17,6 +17,7 @@
 <body class="teal">
 	{% block header %}
 		{% include 'base/header.html' %}
+		{% include 'base/sidenav.html' %}
 		<br>
 	{% endblock %}
 
@@ -39,6 +40,28 @@
 
 	{% block extrajs %}
 	{% endblock %}
+
+	<ul id="slide-out" class="side-nav">
+	    {% if request.user.is_authenticated %}
+	          <li><div class="user-view">
+	                <div class="background">
+	                  <img src="{% static 'images/office.jpg' %}">
+	                </div>
+	                <a href="#!user"><img class="circle" src="{% static 'images/yuna.jpg' %}"></a>
+	                <a href="#!name"><span class="white-text name">{{request.user.first_name}} {{request.user.last_name}}</span></a>
+	                <a href="#!email"><span class="white-text email">{{request.user.email}}</span></a>
+	          </div></li>
+	          <li><a href="{% url 'mascota:mascota_listar' %}">Mascotas</a></li>
+	          <li><a href="{% url 'adopcion:solicitud_listar' %}">Adopciones</a></li>
+	          <li><a href="#!" class="dropdown-button" data-activates="drop-account">
+	              <i class="fas fa-user-circle"></i>
+	              {{request.user.username }} <i class="fas fa-angle-down"></i>
+	          </a></li>
+	      {% else %}
+	          <li><a href="{% url 'usuario:registrar' %}">Registro</a></li>
+	          <li><a href="{% url 'login' %}">Ingresar</a></li>
+	      {% endif %}
+	</ul>
 
 </body>
 </html>

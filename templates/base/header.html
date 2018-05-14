@@ -8,6 +8,11 @@
 		<div class="container">
 			<div class="nav-wrapper">
 				<a href="{% if request.user.is_authenticated %}{% url 'mascota:mascota_listar' %}{% else %}{% url 'index' %}{% endif %}" class="brand-logo "><i class="fas fa-paw"></i> Refugio de Animales</a>
+
+				<a href="#" class="button-collapse" data-activates="slide-out">
+					<i class="fas fa-bars fa-lg"></i>
+				</a>
+
 				<ul class="right hide-on-med-and-down">
 					{% if request.user.is_authenticated %}
 						<li><a href="{% url 'mascota:mascota_listar' %}">Mascotas</a></li>
