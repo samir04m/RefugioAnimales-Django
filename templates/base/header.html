@@ -1,12 +1,13 @@
 <header>
-	<nav class="teal">
+	<nav class="teal darken-2">
 		<div class="container">
 			<div class="nav-wrapper">
 				<a href="#" class="brand-logo "><i class="fas fa-paw"></i> Refugio de Animales</a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Mascotas</a></li>
-					<li><a href="#">Adopciones</a></li>
-					<li><a href="#">Opciones</a></li>
+					<li><a href="{% url 'mascota:mascota_listar' %}">Mascotas</a></li>
+					<li><a href="{% url 'adopcion:solicitud_listar' %}">Adopciones</a></li>
+					<li><a href="{% url 'usuario:registrar' %}">Registro</a></li>
+					<li><a href="#">Ingresar</a></li>
 				</ul>
 			</div>
 		</div>

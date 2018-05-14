@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% block title %} Refugio {% endblock %}</title> 
+	<title>{% block title %} Refugio {% endblock %}</title>
 
 	<link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/myStyles.css' %}">
@@ -14,7 +14,7 @@
 	{% block extrahead %}
 	{% endblock %}
 </head>
-<body>
+<body class="teal">
 	{% block header %}
 		{% include 'base/header.html' %}
 		<br>
@@ -25,12 +25,12 @@
 			<h4>Soy el content</h4>
 		{% endblock %}
 	</main>
-	
+
 	{% block footer %}
 		<br><br>
 		{% include 'base/footer.html' %}
 	{% endblock %}
-	
+
 
 	<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
@@ -43,6 +43,6 @@
 
 	{% block extrajs %}
 	{% endblock %}
-	
+
 </body>
 </html>

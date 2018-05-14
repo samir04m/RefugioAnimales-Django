@@ -3,8 +3,10 @@
 {% block title %} Listado de Mascotas {% endblock %}
 
 {% block content %}
-	<div class="container">
-		
+<div class="container">
+	<div class="card-panel z-depth-4">
+		<center><h4>Listado de Mascotas</h4></center>
+
 		<table class="striped centered responsive-table">
 			<thead>
 				<tr>
@@ -44,7 +46,8 @@
 		<div class="center">
 			<a href="{% url 'mascota:mascota_crear' %}" class="btn waves-effect blue">Agregar Mascota <i class="fas fa-plus"></i></a>
 		</div>
- 
+
 	</div>
+</div>
 
 {% endblock %}
