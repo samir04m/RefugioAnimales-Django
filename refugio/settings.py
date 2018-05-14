@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'apps.adopcion',
     'apps.mascota',
+    'apps.usuario',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         'USER': 'root',
          'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': 3306, 
+        'PORT': 3306,
     }
 }
 
